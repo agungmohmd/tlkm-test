@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"agungmohmd/intikm-test-api/server/handlers"
-	"agungmohmd/intikm-test-api/server/middlewares"
+	"agungmohmd/gateway-api/server/handlers"
+	"agungmohmd/gateway-api/server/middlewares"
 
 	"github.com/gofiber/fiber/v2"
 )

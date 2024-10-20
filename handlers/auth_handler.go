@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	request "agungmohmd/intikm-test-api/server/requests"
-	"agungmohmd/intikm-test-api/usecase"
+	request "agungmohmd/gateway-api/server/requests"
+	"agungmohmd/gateway-api/usecase"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -40,6 +40,8 @@ func (h *AuthHandler) Register(ctx *fiber.Ctx) error {
 
 	userUc := usecase.UserUC{ContractUC: h.ContractUC}
 	res, err := userUc.Register(input.Name, input.Username, input.Password, input.Address)
+	fmt.Println("here res", res)
+	fmt.Println("here err", err)
 	if err != nil {
 		fmt.Println("on auth handler register func", err)
 		return h.SendResponse(ctx, nil, err.Error(), http.StatusBadRequest)

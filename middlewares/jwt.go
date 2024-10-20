@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"agungmohmd/intikm-test-api/server/handlers"
-	"agungmohmd/intikm-test-api/usecase"
+	"agungmohmd/gateway-api/server/handlers"
+	"agungmohmd/gateway-api/usecase"
 	"fmt"
 	"net/http"
 	"strings"

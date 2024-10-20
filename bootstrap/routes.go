@@ -1,8 +1,8 @@
 package bootstrap
 
 import (
-	"agungmohmd/intikm-test-api/server/bootstrap/routes"
-	"agungmohmd/intikm-test-api/server/handlers"
+	"agungmohmd/gateway-api/server/bootstrap/routes"
+	"agungmohmd/gateway-api/server/handlers"
 )
 
 func (boot Bootstrap) RegisterRouters() {

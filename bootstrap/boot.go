@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"database/sql"
 
-	"agungmohmd/intikm-test-api/usecase"
+	"agungmohmd/gateway-api/usecase"
 
 	"github.com/gofiber/fiber/v2"
 )

@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"agungmohmd/intikm-test-api/helper"
-	"agungmohmd/intikm-test-api/usecase"
+	"agungmohmd/gateway-api/helper"
+	"agungmohmd/gateway-api/usecase"
 
 	ut "github.com/go-playground/universal-translator"
 	"github.com/gofiber/fiber/v2"
