@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"agungmohmd/gateway-api/server/handlers"
-	"agungmohmd/gateway-api/usecase"
+	"agungmohmd/sematin-front-api/server/handlers"
+	"agungmohmd/sematin-front-api/usecase"
 	"fmt"
 	"net/http"
 	"strings"

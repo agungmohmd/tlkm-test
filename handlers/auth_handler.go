@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	request "agungmohmd/gateway-api/server/requests"
-	"agungmohmd/gateway-api/usecase"
+	request "agungmohmd/sematin-front-api/server/requests"
+	"agungmohmd/sematin-front-api/usecase"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -37,6 +37,7 @@ func (h *AuthHandler) Register(ctx *fiber.Ctx) error {
 		fmt.Println(err)
 		return h.SendResponse(ctx, nil, err, http.StatusBadRequest)
 	}
+	fmt.Println(input.Name)
 
 	userUc := usecase.UserUC{ContractUC: h.ContractUC}
 	res, err := userUc.Register(input.Name, input.Username, input.Password, input.Address)

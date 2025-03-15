@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"database/sql"
 
-	"agungmohmd/gateway-api/usecase"
+	"agungmohmd/sematin-front-api/usecase"
 
 	"github.com/gofiber/fiber/v2"
 )

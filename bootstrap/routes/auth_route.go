@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"agungmohmd/gateway-api/server/handlers"
+	"agungmohmd/sematin-front-api/server/handlers"
 
 	"github.com/gofiber/fiber/v2"
 )

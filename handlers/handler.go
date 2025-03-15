@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"agungmohmd/gateway-api/helper"
-	"agungmohmd/gateway-api/usecase"
+	"agungmohmd/sematin-front-api/helper"
+	"agungmohmd/sematin-front-api/usecase"
 
 	ut "github.com/go-playground/universal-translator"
 	"github.com/gofiber/fiber/v2"
@@ -90,28 +90,28 @@ func (h Handler) SendResponse(ctx *fiber.Ctx, data interface{}, err interface{},
 	return h.SendSuccessResponse(ctx, data)
 }
 
-//send response if status code 201
+// send response if status code 201
 func (h Handler) SendAcceptedResponse(ctx *fiber.Ctx, data interface{}, meta interface{}) error {
 	response := helper.SuccessResponse(data)
 
 	return ctx.Status(http.StatusAccepted).JSON(response)
 }
 
-//send response if status code 200
+// send response if status code 200
 func (h Handler) SendSuccessResponse(ctx *fiber.Ctx, data interface{}) error {
 	response := helper.SuccessResponse(data)
 
 	return ctx.Status(http.StatusOK).JSON(response)
 }
 
-//send response if status code != 200
+// send response if status code != 200
 func (h Handler) SendErrorResponse(ctx *fiber.Ctx, err interface{}, code int) error {
 	response := helper.ErrorResponse(err)
 
 	return ctx.Status(code).JSON(response)
 }
 
-//send response if status code 200
+// send response if status code 200
 func (h Handler) SendFileResponse(ctx *fiber.Ctx, data, contentType string) error {
 	fileRes, err := os.OpenFile(data, os.O_RDWR, 0644)
 	if err != nil {

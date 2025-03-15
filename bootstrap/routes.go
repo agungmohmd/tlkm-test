@@ -1,8 +1,8 @@
 package bootstrap
 
 import (
-	"agungmohmd/gateway-api/server/bootstrap/routes"
-	"agungmohmd/gateway-api/server/handlers"
+	"agungmohmd/sematin-front-api/server/bootstrap/routes"
+	"agungmohmd/sematin-front-api/server/handlers"
 )
 
 func (boot Bootstrap) RegisterRouters() {
